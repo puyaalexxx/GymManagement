@@ -21,9 +21,11 @@ namespace GymManagement.Application.Subscriptions.Commands.CreateSubscription
         {
             //create a subscription
             var subscription = new Subscription
-            {
-                Id = Guid.NewGuid()
-            };
+            (
+                subscriptionType: request.SubscriptionType,
+                adminId: request.AdminId
+
+            );
 
             //add it to the database
             await _subscriptionRepository.AddSubscriptionAsync(subscription);
