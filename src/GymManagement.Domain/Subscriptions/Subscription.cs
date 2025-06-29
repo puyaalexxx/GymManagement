@@ -6,7 +6,7 @@
 
         public Guid Id { get; private set; }
 
-        public SubscriptionType SubscriptionType { get; private set; }
+        public SubscriptionType SubscriptionType { get; private set; } = null!;
 
         private Subscription()
         {
